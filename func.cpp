@@ -352,7 +352,7 @@ void show_material_info(char* material_filename){
 
 void dump_furniture(furniture a, char* furniture_filename, char* storage_filename){
     ofstream f = get_outf(furniture_filename);
-    f.write((char*)&a, sizeof(furniture));
+    f << a;
     f.close();
 
     ofstream ff = get_outf(storage_filename);
