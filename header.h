@@ -92,6 +92,14 @@ public:
     void init_storage_capacity();
     void init_curr_capacity();
 
+    ~furniture(){
+        delete[] bed_count;
+        delete[] cabinet_count;
+        delete[] table_count;
+        delete[] storage_capacity;
+        delete[] curr_capacity;
+    }
+
     friend std::ostream& operator<<(std::ostream &out, const material a);
     friend std::ostream& operator<<(std::ostream &out, const furniture a);
 };
